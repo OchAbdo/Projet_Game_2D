@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 530ac12b6c30306328ece4fe1af6e78b
+guid: e549d6c0b1cec7896b99478e69319bf7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,169 +97,148 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Attack-01-Sheet_0
+      name: Walk-Base-Sheet-White_0
       rect:
         serializedVersion: 2
-        x: 33
-        y: 16
-        width: 35
-        height: 44
+        x: 2
+        y: 0
+        width: 41
+        height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c78e38a0e89f6b54835b7e1e05c2265
-      internalID: -1331311772
+      spriteID: 236f6d0af936bead3a89ad3f15742f26
+      internalID: 1213397723
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack-01-Sheet_1
+      name: Walk-Base-Sheet-White_1
       rect:
         serializedVersion: 2
-        x: 129
-        y: 16
-        width: 54
-        height: 64
+        x: 49
+        y: 0
+        width: 42
+        height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb87e7a0c8941fd258ed4d9e48c7e99a
-      internalID: -1567052498
+      spriteID: b5a42857fe824f4f29da8c3d530b0f32
+      internalID: 1466967311
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack-01-Sheet_2
+      name: Walk-Base-Sheet-White_2
       rect:
         serializedVersion: 2
-        x: 223
-        y: 16
-        width: 35
-        height: 60
+        x: 96
+        y: 7
+        width: 4
+        height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca27cd0521ce6c7f9902da8b4d11d82e
-      internalID: -820123049
+      spriteID: 286f74445bd11a11ea4819781bdf6412
+      internalID: 1150992600
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack-01-Sheet_3
+      name: Walk-Base-Sheet-White_3
       rect:
         serializedVersion: 2
-        x: 319
-        y: 16
-        width: 35
-        height: 48
+        x: 101
+        y: 0
+        width: 38
+        height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3657715b76811198a1dd6040cb64eac
-      internalID: 1026380332
+      spriteID: dfceeca54ae1b934d8052284d878f9e5
+      internalID: 1449872713
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack-01-Sheet_4
+      name: Walk-Base-Sheet-White_4
       rect:
         serializedVersion: 2
-        x: 415
-        y: 16
-        width: 35
-        height: 48
+        x: 145
+        y: 0
+        width: 42
+        height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92a39c1253246fc329438321e77eb6bf
-      internalID: -1770769292
+      spriteID: 7a12b137e5f7ee8e6baf412b610a5101
+      internalID: -1052518403
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack-01-Sheet_5
+      name: Walk-Base-Sheet-White_5
       rect:
         serializedVersion: 2
-        x: 496
-        y: 4
-        width: 61
-        height: 65
+        x: 197
+        y: 0
+        width: 38
+        height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8429b1394fd827d1ca6bd3ec2c8e9ca6
-      internalID: 1588001986
+      spriteID: aada9aabe21262126baa6f43ee9ae598
+      internalID: 1448098380
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack-01-Sheet_6
+      name: Walk-Base-Sheet-White_6
       rect:
         serializedVersion: 2
-        x: 584
-        y: 16
-        width: 54
-        height: 44
+        x: 245
+        y: 0
+        width: 38
+        height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10ebf05297a8b9ca097c63f8c81ac9aa
-      internalID: -1269461016
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Attack-01-Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 680
-        y: 16
-        width: 54
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 86dfb32f4196382839236bbb8647964f
-      internalID: -1390716709
+      spriteID: 2918d6e7020f25e6682467fef579b139
+      internalID: 209294123
       vertices: []
       indices: 
       edges: []
@@ -275,14 +254,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Attack-01-Sheet_0: -1331311772
-      Attack-01-Sheet_1: -1567052498
-      Attack-01-Sheet_2: -820123049
-      Attack-01-Sheet_3: 1026380332
-      Attack-01-Sheet_4: -1770769292
-      Attack-01-Sheet_5: 1588001986
-      Attack-01-Sheet_6: -1269461016
-      Attack-01-Sheet_7: -1390716709
+      Walk-Base-Sheet-White_0: 1213397723
+      Walk-Base-Sheet-White_1: 1466967311
+      Walk-Base-Sheet-White_2: 1150992600
+      Walk-Base-Sheet-White_3: 1449872713
+      Walk-Base-Sheet-White_4: -1052518403
+      Walk-Base-Sheet-White_5: 1448098380
+      Walk-Base-Sheet-White_6: 209294123
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
