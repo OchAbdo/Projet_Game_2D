@@ -16,11 +16,11 @@ public class kill : MonoBehaviour
         
     }
  */
-    void OnTriggerEnter2D(Collider2D collision)
+/*     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("hoob"))
         {
             Debug.Log("Trigger avec un ennemi !");
         }
-    }
+    } */
 }

@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class Movement : MonoBehaviour
 {
@@ -12,6 +12,7 @@ public class Movement : MonoBehaviour
     private float mouv;
     private Rigidbody2D rgb;
 
+    public Slider slider ;
     public int speed , forcejump;
     private bool jump , grounded;
 
@@ -23,7 +24,8 @@ public class Movement : MonoBehaviour
         rgb = GetComponent<Rigidbody2D>();
         jump = false;
         grounded = false ; 
-
+        slider.value = 10; 
+        anim.SetInteger("mort", 0);
     }
 
     // Update is called once per frame
@@ -60,6 +62,19 @@ public class Movement : MonoBehaviour
             grounded = false;
         }
 
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("hoob"))
+        {
+            //Debug.Log("Le joueur touche l'ennemi !");
+            slider.value -= 1;
+            if(slider.value <= 0 ){
+                anim.SetInteger("mort", 1);
+                
+            }
+        }
     }
 
 
