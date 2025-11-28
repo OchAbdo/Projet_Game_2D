@@ -21,12 +21,24 @@ public class Movement : MonoBehaviour
     public Text scoreText; 
     private int bestScore ;
 
+    public AudioSource audioSource;
+    public AudioClip coinSound;
+    public AudioClip jumpSound;
+    public AudioClip hitSound;
+    public AudioClip sucSound;
+
+    private SpriteRenderer spriteRenderer;
+    
+
+
 
     void Start()
     {
         anim = GetComponent<Animator>();
         spr = GetComponent<SpriteRenderer>();
         rgb = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         jump = false;
         grounded = false ; 
         slider.value = 10; 
@@ -35,6 +47,7 @@ public class Movement : MonoBehaviour
         PlayerPrefs.SetInt("score" , score);
         scoreText.text = ""+score;
         bestScore = PlayerPrefs.GetInt("BestScore", 0);
+        spriteRenderer.enabled = true;
     }
 
     // Update is called once per frame
@@ -65,7 +78,7 @@ public class Movement : MonoBehaviour
 
         if (jump)
         {
-            
+            audioSource.PlayOneShot(jumpSound);
             rgb.AddForce(transform.up * forcejump);
             jump = false;
             grounded = false;
@@ -78,6 +91,7 @@ public class Movement : MonoBehaviour
         if (collision.collider.CompareTag("hoob") || collision.collider.CompareTag("hoobmoy") || collision.collider.CompareTag("hoobdif") )
         {
             //Debug.Log("Le joueur touche l'ennemi !");
+            audioSource.PlayOneShot(hitSound);
             slider.value -= 1;
             if(slider.value <= 0 ){
                 anim.SetInteger("mort", 1);
@@ -87,6 +101,13 @@ public class Movement : MonoBehaviour
 
             }
         }
+         if (collision.collider.CompareTag("fin"))
+         {
+            spriteRenderer.enabled = false;  
+            audioSource.PlayOneShot(sucSound);
+            StartCoroutine(WaitAndMenu()); 
+         }
+
     }
 
      private void OnTriggerEnter2D(Collider2D collision)
@@ -94,6 +115,7 @@ public class Movement : MonoBehaviour
         if (collision.CompareTag("coin"))
         {
             score = score + 1 ;
+            audioSource.PlayOneShot(coinSound);
             PlayerPrefs.SetInt("score" , score);
             bestScore = PlayerPrefs.GetInt("BestScore",0);
             scoreText.text =  ""+score ;
@@ -111,8 +133,14 @@ public class Movement : MonoBehaviour
 
     public IEnumerator WaitAndGameOver()
     {
-        yield return new WaitForSecondsRealtime(2f);
+        yield return new WaitForSecondsRealtime(3f);
         SceneManager.LoadScene("Gameover");
+    }
+
+      public IEnumerator WaitAndMenu()
+    {
+        yield return new WaitForSecondsRealtime(5f);
+        SceneManager.LoadScene("Menu");
     }
 
 

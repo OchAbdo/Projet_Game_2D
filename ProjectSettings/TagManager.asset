@@ -9,6 +9,7 @@ TagManager:
   - hoobmoy
   - hoobdif
   - coin
+  - fin
   layers:
   - Default
   - TransparentFX

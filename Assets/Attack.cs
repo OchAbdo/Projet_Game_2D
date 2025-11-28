@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Attack : MonoBehaviour
 {
@@ -10,11 +11,15 @@ public class Attack : MonoBehaviour
     public GameObject enemymoy;
     public GameObject enemydif;
 
+    public AudioSource audioSource;
+    public AudioClip attackSound;
+
 
     void Start()
     {
     
         anim = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -41,6 +46,7 @@ public class Attack : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.X))
         {
+            audioSource.PlayOneShot(attackSound);
              anim.SetBool("att", true);
         }
         if (Input.GetKeyUp(KeyCode.X))
