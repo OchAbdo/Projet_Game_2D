@@ -5,20 +5,33 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
 
-    public Animator anim;               
+    public Animator anim;      
+    public GameObject enemy;     
+    public GameObject enemymoy;
+    public GameObject enemydif;
 
 
     void Start()
     {
     
-            anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("hoob"))
         {
-            Debug.Log("nagiss dam");
+            Destroy(enemy);
+        }
+
+        if (collision.CompareTag("hoobmoy"))
+        {
+            Destroy(enemymoy);
+        }
+
+        if (collision.CompareTag("hoobdif"))
+        {
+            Destroy(enemydif);
         }
     } 
 

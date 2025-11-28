@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class Movement : MonoBehaviour
     public Slider slider ;
     public int speed , forcejump;
     private bool jump , grounded;
+    private int score ; 
+
+    public Text scoreText; 
+    private int bestScore ;
 
 
     void Start()
@@ -26,6 +31,10 @@ public class Movement : MonoBehaviour
         grounded = false ; 
         slider.value = 10; 
         anim.SetInteger("mort", 0);
+        score = 0 ;
+        PlayerPrefs.SetInt("score" , score);
+        scoreText.text = ""+score;
+        bestScore = PlayerPrefs.GetInt("BestScore", 0);
     }
 
     // Update is called once per frame
@@ -66,15 +75,44 @@ public class Movement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("hoob"))
+        if (collision.collider.CompareTag("hoob") || collision.collider.CompareTag("hoobmoy") || collision.collider.CompareTag("hoobdif") )
         {
             //Debug.Log("Le joueur touche l'ennemi !");
             slider.value -= 1;
             if(slider.value <= 0 ){
                 anim.SetInteger("mort", 1);
-                
+                //SceneManager.LoadScene("Gameover");
+                //Time.timeScale = 0f; 
+                StartCoroutine(WaitAndGameOver()); 
+
             }
         }
+    }
+
+     private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("coin"))
+        {
+            score = score + 1 ;
+            PlayerPrefs.SetInt("score" , score);
+            bestScore = PlayerPrefs.GetInt("BestScore",0);
+            scoreText.text =  ""+score ;
+            if (score > bestScore)
+            {
+                PlayerPrefs.SetInt("BestScore", score);
+
+            }
+
+            Destroy(collision.gameObject);
+        }
+    }
+
+
+
+    public IEnumerator WaitAndGameOver()
+    {
+        yield return new WaitForSecondsRealtime(2f);
+        SceneManager.LoadScene("Gameover");
     }
 
 
